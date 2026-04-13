@@ -171,3 +171,41 @@ footer {
     .nav-links { gap: 15px; }
     .nav-archive-btn { padding: 8px 12px; font-size: 0.75rem; }
 }
+
+/* Mobile Optimization for iPhone Mini / Small Screens */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px; /* Reduces space between nav items so they don't overlap */
+    }
+
+    .nav-links a {
+        font-size: 0.7rem; /* Makes text slightly smaller to fit the width */
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        height: 60vh; /* Prevents the hero from being too tall on mobile */
+    }
+
+    .glitch-text {
+        font-size: 3.5rem; /* Shrinks the massive title so it doesn't break into two lines */
+    }
+
+    /* Stack the social and milestone cards so they aren't squeezed */
+    .social-grid, .milestone-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .social-card, .milestone-card {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .twitch-cta {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+        width: 100%; /* Makes the button full-width and easier to tap */
+        justify-content: center;
+    }
+}
